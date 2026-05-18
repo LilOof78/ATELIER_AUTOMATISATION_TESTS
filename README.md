@@ -50,6 +50,16 @@ Pour cet atelier, **vous avez 4 secrets à créer** dans votre Repository GitHUB
   
 **Dernière étape :** Pour engager l'automatisation de votre première Action, vous devez cliquer sur le gros boutton vert dans l'onglet supérieur [Actions] dans votre Repository Github. Le boutton s'intitule "I understand my workflows, go ahead and enable them". Ensuite procédez à une "petite" modification de votre fichier README.md GitHub puis faites un [Commit] pour déclancher l'action.   
 
+## Accès au site PythonAnywhere depuis GitHub  
+Le workflow `.github/workflows/deploy-pythonanywhere.yml` déploie automatiquement votre projet sur le site indiqué par le secret `PA_WEBAPP_DOMAIN`.  
+
+- Si `PA_WEBAPP_DOMAIN` contient `monuser.pythonanywhere.com`, le site est accessible à l'adresse :  
+  `https://monuser.pythonanywhere.com`  
+- Pour déployer, poussez une modification sur la branche `main` (par exemple un commit sur `README.md`).  
+- GitHub Actions va ensuite upload tous les fichiers dans `PA_TARGET_DIR` et recharger l'application.  
+
+> Assurez-vous que les secrets `PA_USERNAME`, `PA_TOKEN`, `PA_TARGET_DIR` et `PA_WEBAPP_DOMAIN` sont bien créés dans `Settings → Secrets and variables → Actions`.  
+
 Notions acquises de cette séquence :  
 Vous avez vu dans cette séquence comment créer des secrets GiHUB afin de mettre en place de l'industrialisation continue.   
   
