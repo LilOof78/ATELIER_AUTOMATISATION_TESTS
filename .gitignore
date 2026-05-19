@@ -1,0 +1,28 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pyvenv.cfg
+
+# IDEs / editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PythonAnywhere / local data
+*.sqlite3
+*.db
+
+# Logs
+*.log
+
+# Distribution
+build/
+dist/
+*.egg-info/
